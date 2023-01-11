@@ -1,0 +1,13 @@
+.Content {
+    display: flex;
+    justify-content: space-between;
+}
+.ContentForm {
+    /* background-color: green; */
+    width: 100%;
+}
+
+.ContentList {
+    /* background-color: red; */
+    width: 100%;
+}
