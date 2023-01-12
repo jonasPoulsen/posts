@@ -16,14 +16,21 @@ function Content() {
         setUserId(userId);
     };
 
+    const [extraPosts, setThePost] = useState([]);
+    const updatePostList = (data) => {
+        setThePost([...extraPosts, data]);
+    }
+
     return(
         <div className='Content'>
+
+
             <div className="ContentForm">            
                 <Inputs updateUserId={updateUserId} />
-                <CreatePost userId={userId}/>
+                <CreatePost userId={userId} updatePostList={updatePostList}/>
             </div>
             <div className="ContentList">            
-                <Posts userId={userId}/>
+                <Posts userId={userId} extraPosts={extraPosts} />
             </div>
         </div>
     );

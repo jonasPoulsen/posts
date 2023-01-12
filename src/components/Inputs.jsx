@@ -6,9 +6,7 @@ import { useState } from 'react';
 function Inputs({ updateUserId }) {
 
     let storedEmailValue = localStorage.getItem("Useremail") ? localStorage.getItem("Useremail") : '';
-    
     const [email, setEmail] = useState( storedEmailValue );
-
     const [message, setMessage] = useState('');
     
     const handleChange = (event) => {

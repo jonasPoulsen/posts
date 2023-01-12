@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 //import '../styles/Content.css';
 
-function Posts({userId}) {
+function Posts({userId, extraPosts}) {
 
     const [posts, setPosts] = useState([]);
 
@@ -12,7 +12,7 @@ function Posts({userId}) {
         fetch('https://jsonplaceholder.typicode.com/posts?userId=' + userId)
             .then((response) => response.json())
             .then((data) => {
-                //console.log(data);
+                console.log(data);
                 setPosts(data);
             })
             .catch((err) => {
@@ -30,6 +30,16 @@ function Posts({userId}) {
                     </div>
                 );
             })}
+
+            {extraPosts.map((post) => {
+                return (
+                    <div className="post-card" key={post.id}>
+                        <h5 className="post-title">{post.title}</h5>
+                        <p className="post-body">{post.body}</p>
+                    </div>
+                );
+            })}
+
         </div>            
     );
 };
