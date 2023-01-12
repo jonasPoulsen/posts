@@ -19,7 +19,7 @@ function Posts({userId, extraPosts}) {
         
     return (
         <div className='Posts'>
-            {posts.map((post) => {
+            {extraPosts.map((post) => {
                 return (
                     <div className="Posts-card" key={post.id}>
                         <h4 className="Posts-title">{post.title}</h4>
@@ -27,8 +27,8 @@ function Posts({userId, extraPosts}) {
                     </div>
                 );
             })}
-
-            {extraPosts.map((post) => {
+            
+            {posts.map((post) => {
                 return (
                     <div className="Posts-card" key={post.id}>
                         <h4 className="Posts-title">{post.title}</h4>
