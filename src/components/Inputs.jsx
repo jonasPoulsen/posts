@@ -1,7 +1,5 @@
-//Input.jsx
-
 import { useState } from 'react';
-//import '../styles/Content.css';
+import '../styles/Inputs.css';
 
 function Inputs({ updateUserId }) {
 
@@ -21,7 +19,7 @@ function Inputs({ updateUserId }) {
 
         //Validate if this is an email
         if ( !(/\S+@\S+\.\S+/.test(email)) ) {
-            setMessage("this is not an email");
+            setMessage("This is not an email");
         }else{
             setMessage('');
 
@@ -39,24 +37,22 @@ function Inputs({ updateUserId }) {
                 updateUserId(randUserId);
             }
         }
-
-        
-        
     };
         
     return (
-        <div>
-            <div>{message}</div>
-            <input
-                type="text"
-                id="email"
-                name="email"
-                onChange={handleChange}
-                value={email}
-            />
-
-
-            <button onClick={handleClick}>Set email</button>
+        <div className='Inputs'>
+            <div className='Inputs-message'>{message}</div>
+            <div>
+                <input
+                    className='Inputs-input'
+                    type="text"
+                    id="email"
+                    name="email"
+                    onChange={handleChange}
+                    value={email}
+                />
+                <button className='Inputs-button' onClick={handleClick}>Set email</button>
+            </div>
         </div>            
     );
 };

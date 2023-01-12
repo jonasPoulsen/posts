@@ -1,0 +1,29 @@
+.Inputs-message{
+    color: red;
+    font-weight: 700;
+    height: 30px;
+}
+
+.Inputs-input {
+    height: 30px;
+    width: 300px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 1px solid rgb(101, 99, 99);
+    
+}
+
+.Inputs-button {
+    height: 35px;
+    margin-left: 35px;
+    padding: 10px;
+    line-height: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: #1890ff;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}

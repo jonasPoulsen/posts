@@ -1,7 +1,5 @@
-//CreatePost.jsx
-
 import { useState } from 'react';
-//import '../styles/Content.css';
+import '../styles/CreatePost.css';
 
 function CreatePost({userId, updatePostList}) {
 
@@ -41,15 +39,10 @@ function CreatePost({userId, updatePostList}) {
         return (
             <div className='CreatePost'>
 
-<br />
-<br />
-<br />
-
-                <h3>Create a new post here</h3>
-                <div>                
-                    <h5>Post title</h5>
-                </div>
+                <h3 className='CreatePost-header'>Create a new post here</h3>
+                <h4 className='CreatePost-title-header'>Post title</h4>
                 <input
+                className='CreatePost-title-input'
                     type="text"
                     id="post-title"
                     name="post-title"
@@ -57,13 +50,10 @@ function CreatePost({userId, updatePostList}) {
                     value={postTitle}
                     placeholder="Post title"
                 />
-<br />
-<br />
-                <div>
-                    <h5>Post body</h5>
-                    <button>add ai</button>
-                </div>                
+
+                <h4 className='CreatePost-body-header'>Post body</h4>
                 <textarea
+                    className='CreatePost-body-input'
                     type="textarea"
                     id="post-body"
                     name="post-body"
@@ -71,11 +61,12 @@ function CreatePost({userId, updatePostList}) {
                     value={postBody}
                     placeholder="Post body"
                 />
-                <br />
-                <br />
-                <br />        
+
                 <div>
-                    <button onClick={(e) => addPost(postTitle, postBody)}>Submit this post</button>
+                    <button 
+                        className='CreatePost-submit'
+                        onClick={(e) => addPost(postTitle, postBody)}
+                    >Submit this post</button>
                 </div>
 
             </div>            

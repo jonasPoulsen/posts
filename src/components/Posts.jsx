@@ -1,7 +1,5 @@
-//Posts.jsx
-
 import { useState, useEffect } from 'react';
-//import '../styles/Content.css';
+import '../styles/Posts.css';
 
 function Posts({userId, extraPosts}) {
 
@@ -21,21 +19,21 @@ function Posts({userId, extraPosts}) {
     }, [userId]);
         
     return (
-        <div>
+        <div className='Posts'>
             {posts.map((post) => {
                 return (
-                    <div className="post-card" key={post.id}>
-                        <h5 className="post-title">{post.title}</h5>
-                        <p className="post-body">{post.body}</p>
+                    <div className="Posts-card" key={post.id}>
+                        <h4 className="Posts-title">{post.title}</h4>
+                        <p className="Posts-body">{post.body}</p>
                     </div>
                 );
             })}
 
             {extraPosts.map((post) => {
                 return (
-                    <div className="post-card" key={post.id}>
-                        <h5 className="post-title">{post.title}</h5>
-                        <p className="post-body">{post.body}</p>
+                    <div className="Posts-card" key={post.id}>
+                        <h4 className="Posts-title">{post.title}</h4>
+                        <p className="Posts-body">{post.body}</p>
                     </div>
                 );
             })}

@@ -1,8 +1,4 @@
-//Content.jsx
-
-//import React, { useState } from 'react';
 import { useState } from 'react';
-
 import '../styles/Content.css';
 import Inputs from './Inputs';
 import Posts from './Posts';
@@ -14,6 +10,9 @@ function Content() {
     const [userId, setUserId] = useState( localStorage.getItem("Userid") );
     const updateUserId = (userId) => {
         setUserId(userId);
+
+        // extraPosts is connected to a user - Clear the array when new user is set.
+        setThePost([]);
     };
 
     const [extraPosts, setThePost] = useState([]);

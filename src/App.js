@@ -6,6 +6,7 @@ import Content from './components/Content'
 function App() {
   return (
     <div className="App">
+      <img src={logo} alt="Logo" className='App-logo'/>;
       <Header />
       <Content />
     </div>
