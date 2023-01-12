@@ -10,7 +10,6 @@ function Posts({userId, extraPosts}) {
         fetch('https://jsonplaceholder.typicode.com/posts?userId=' + userId)
             .then((response) => response.json())
             .then((data) => {
-                console.log(data);
                 setPosts(data);
             })
             .catch((err) => {
